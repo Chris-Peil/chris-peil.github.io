@@ -1,25 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Basic Page Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Notes</title>
-    <link rel="stylesheet" href="style.css">
+    <title>My Professional CV</title>
+    <!-- Inter Font from Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Hide the print button when printing */
+        @media print {
+            .print-button {
+                display: none;
+            }
+        }
+    </style>
 </head>
-<body>
-    <div class="container">
-        <h1>My Personal Notes</h1>
+<body class="bg-gray-100 p-4 sm:p-8 md:p-12 lg:p-16">
 
-        <div class="search-section">
-            <input type="text" id="searchInput" placeholder="Search notes...">
-            <button id="searchButton">Search</button>
-            <button id="clearSearchButton">Clear Search</button>
-        </div>
+    <!-- CV Container -->
+    <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-6 sm:p-10">
 
-        <div id="notesDisplay" class="notes-display">
+        <!-- Header Section -->
+        <header class="text-center mb-8">
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-2">Your Name Here</h1>
+            <p class="text-lg text-gray-600 font-medium">Professional Title or Tagline</p>
+            <div class="flex flex-col sm:flex-row justify-center items-center text-gray-500 mt-4 space-y-2 sm:space-y-0 sm:space-x-4">
+                <span class="flex items-center space-x-2">
+                    <i class="fas fa-envelope text-blue-500"></i>
+                    <a href="mailto:youremail@example.com" class="hover:text-blue-500">youremail@example.com</a>
+                </span>
+                <span class="flex items-center space-x-2">
+                    <i class="fas fa-phone-alt text-blue-500"></i>
+                    <span>(123) 456-7890</span>
+                </span>
+                <span class="flex items-center space-x-2">
+                    <i class="fas fa-map-marker-alt text-blue-500"></i>
+                    <span>City, State</span>
+                </span>
             </div>
-    </div>
+            <div class="flex justify-center items-center space-x-6 mt-4 text-xl">
+                <a href="https://github.com/yourusername" target="_blank" class="text-gray-500 hover:text-gray-800 transition-colors duration-200">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-gray-500 hover:text-blue-700 transition-colors duration-200">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://yourwebsite.com" target="_blank" class="text-gray-500 hover:text-purple-600 transition-colors duration-200">
+                    <i class="fas fa-globe"></i>
+                </a>
+            </div>
+        </header>
 
-    <script src="script.js"></script>
+        <!-- Main Content -->
+        <main>
+            <!-- Professional Summary -->
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-700 border-b-2 border-blue-500 pb-2 mb-4">Summary</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    A concise summary of your skills, experience, and career goals. Highlight key achievements and areas of expertise that are most relevant to the positions you are seeking.
+                </p>
+            </section>
+
+            <!-- Experience Section -->
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-700 border-b-2 border-blue-500 pb-2 mb-4">Experience</h2>
+                
+                <!-- Job Entry 1 -->
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold text-gray-800">Job Title</h3>
+                    <p class="text-gray-600 font-medium">Company Name | City, State</p>
+                    <p class="text-sm text-gray-500 mt-1">Month YYYY – Month YYYY</p>
+                    <ul class="list-disc list-inside mt-2 text-gray-700 space-y-1">
+                        <li>Description of key responsibilities and accomplishments.</li>
+                        <li>Quantify your achievements whenever possible (e.g., "Increased efficiency by 15%").</li>
+                        <li>Use action verbs to describe your role and impact.</li>
+                    </ul>
+                </div>
+                
+                <!-- Job Entry 2 -->
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold text-gray-800">Another Job Title</h3>
+                    <p class="text-gray-600 font-medium">Another Company | City, State</p>
+                    <p class="text-sm text-gray-500 mt-1">Month YYYY – Month YYYY</p>
+                    <ul class="list-disc list-inside mt-2 text-gray-700 space-y-1">
+                        <li>Highlight a different set of skills or achievements from this role.</li>
+                        <li>Explain your contributions and the outcomes of your work.</li>
+                    </ul>
+                </div>
+
+            </section>
+
+            <!-- Education Section -->
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-700 border-b-2 border-blue-500 pb-2 mb-4">Education</h2>
+                
+                <!-- Education Entry 1 -->
+                <div class="mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Degree, Major</h3>
+                    <p class="text-gray-600 font-medium">University Name | City, State</p>
+                    <p class="text-sm text-gray-500 mt-1">Month YYYY – Month YYYY</p>
+                </div>
+                
+            </section>
+
+            <!-- Skills Section -->
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-700 border-b-2 border-blue-500 pb-2 mb-4">Skills</h2>
+                <div class="flex flex-wrap gap-4 text-gray-700">
+                    <span class="bg-gray-200 px-3 py-1 rounded-full text-sm font-medium">Skill 1</span>
+                    <span class="bg-gray-200 px-3 py-1 rounded-full text-sm font-medium">Skill 2</span>
+                    <span class="bg-gray-200 px-3 py-1 rounded-full text-sm font-medium">Skill 3</span>
+                    <span class="bg-gray-200 px-3 py-1 rounded-full text-sm font-medium">Skill 4</span>
+                    <span class="bg-gray-200 px-3 py-1 rounded-full text-sm font-medium">Skill 5</span>
+                    <span class="bg-gray-200 px-3 py-1 rounded-full text-sm font-medium">Skill 6</span>
+                </div>
+            </section>
+
+            <!-- Projects Section (Optional) -->
+            <!-- <section class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-700 border-b-2 border-blue-500 pb-2 mb-4">Projects</h2>
+                <div class="mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Project Name</h3>
+                    <p class="text-sm text-gray-500 mt-1">Description of the project and your role. Include a link if applicable.</p>
+                </div>
+            </section> -->
+
+            <!-- Print Button -->
+            <div class="flex justify-center mt-8 print-button">
+                <button onclick="window.print()" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-full shadow-md transition-all duration-200">
+                    <i class="fas fa-print mr-2"></i> Print to PDF
+                </button>
+            </div>
+        </main>
+
+    </div>
 </body>
 </html>
